@@ -26,8 +26,8 @@ export const withThemeProvider = <T extends object>(
   Component: React.ComponentType<T>
 ) => {
   return (props: T) => (
-    <ThemeProvider theme={theme}>
+    <StyledThemeProvider>
       <Component {...props} />
-    </ThemeProvider>
+    </StyledThemeProvider>
   );
 };

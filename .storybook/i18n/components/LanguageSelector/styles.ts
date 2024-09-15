@@ -8,7 +8,7 @@ export const LanguageSelectorWrapper = styled.div`
 `;
 
 export const LanguageButton = styled.div<{ $isActive?: boolean }>`
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   padding: 4px 16px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.08);

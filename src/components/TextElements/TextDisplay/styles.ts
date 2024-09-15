@@ -19,14 +19,17 @@ export const TextWrapper = styled.p<ITextDisplay>`
     $textDecoration,
   }) => css`
     flex: 1;
-    line-height: ${$lineHeight || 0};
+    line-height: ${$lineHeight ? `${$lineHeight}px` : 'normal'};
     letter-spacing: ${$letterSpacing || 0}px;
     text-align: ${$textAlign || 'left'};
     text-decoration: ${$textDecoration || 'none'};
     font-size: ${getFontSize(theme, $fontSize || 'md')};
     color: ${getColorValue(theme, $textColor || 'obsidian')};
     font-weight: ${getFontWeight(theme, $fontWeight || 'regular')};
-    font-family: ${theme.fontFamily[$fontFamily || 'default'] ||
-    'Times New Roman'};
+    font-family: ${theme.fontFamily[$fontFamily || 'default'] || 'Times New Roman'};
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
   `}
 `;
+

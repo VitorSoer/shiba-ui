@@ -23,7 +23,6 @@ const Button: React.FC<IButton> = ({
   $iconColor,
   $iconSize = 16,
   $textColor,
-  $fontSize = 'xs',
   $textAlign = 'center',
   ...rest
 }) => {
@@ -70,7 +69,6 @@ const Button: React.FC<IButton> = ({
           <TextDisplay
             text={text}
             $textColor={getComponentColor($textColor)}
-            $fontSize={$fontSize}
             $textAlign={$textAlign}
             {...rest}
           />

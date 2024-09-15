@@ -248,7 +248,7 @@ const meta: Meta<IButton> = {
       description: t('docs_size_predefined'),
       table: {
         type: { summary: formatKeyNamesForSummary(fontSize) },
-        defaultValue: { summary: 'xs' },
+        defaultValue: { summary: 'md' },
         category: 'Text Display',
       },
     },
