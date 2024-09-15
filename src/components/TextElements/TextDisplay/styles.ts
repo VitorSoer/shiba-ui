@@ -18,7 +18,6 @@ export const TextWrapper = styled.p<ITextDisplay>`
     $letterSpacing,
     $textDecoration,
   }) => css`
-    flex: 1;
     line-height: ${$lineHeight ? `${$lineHeight}px` : 'normal'};
     letter-spacing: ${$letterSpacing || 0}px;
     text-align: ${$textAlign || 'left'};

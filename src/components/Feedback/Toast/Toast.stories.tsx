@@ -24,7 +24,7 @@ type Story = StoryObj<typeof ToastContainer>;
 export const DefaultOptions: Story = {
   render: () => {
     const showToast = (message: string, type: ToastType) => {
-      return toast[type](message);
+      return toast[type](message, {$width: 280});
     };
 
     return (

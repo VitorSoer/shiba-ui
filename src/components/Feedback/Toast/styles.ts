@@ -44,6 +44,7 @@ export const ToastItem = styled.div<IToast & { $isExiting: boolean }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 12px;
 
     box-shadow: ${theme.elevation.xs};
     background: ${getColorValue(theme, $background)};
