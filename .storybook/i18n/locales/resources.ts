@@ -52,6 +52,68 @@ export const resources = {
       docs_full_width:
         'Accepts a `boolean` to determine if the component should occupy the full available space.',
       docs_copied: 'Copied!',
+      docs_toast: `
+
+The \`ToastContainer\` component is used to display toast notifications in your application. 
+
+## Configuration
+
+Add the \`ToastContainer\` to your component:
+
+\`\`\`jsx
+import React from 'react';
+import ToastContainer, { toast } from 'shiba-ui';
+
+function App() {
+  return (
+    <div>
+      {/* Other components */}
+      <ToastContainer />
+    </div>
+  );
+}
+  
+export default App;
+\`\`\`
+
+## Usage
+
+Use the toast functions to display messages:
+
+\`\`\`jsx
+import { toast } from 'shiba-ui';
+
+const toastSuccess = toast.success('Example message');
+const toastError = toast.error('Example message');
+const toastNeutral = toast.neutral('Example message');
+const toastWarning = toast.warning('Example message');
+\`\`\`
+
+## Accepted Properties (\`IToast\`)
+
+The properties that can be passed to the toast functions are:
+  
+- **message**:  Message to be displayed.
+- **timeout**: Display time of the toast (in milliseconds).
+- **$background**: Background color of the toast.
+- **$messageColor**: Message color of the toast.
+- **$borderColor**: border color of the toast.
+- **$width:**: Width of the toast.
+- **$height**: Height of the toast.
+- **$borderRadius**: Border radius of the toast.
+
+\`\`\`jsx
+const customToast = toast.neutral('Mensagem de exemplo', {
+  timeout: 5000,
+  $background: 'charcoal',
+  $messageColor: 'secondary',
+  $borderColor: 'secondary',
+  $borderRadius: 'sm',
+  $height: 50,
+  $width: 500,
+})
+\`\`\`
+`,
     },
   },
   pt: {
@@ -109,6 +171,68 @@ export const resources = {
       docs_full_width:
         'Aceita um `boolean` para definir se o componente deve ocupar todo o espaço disponível.',
       docs_copied: 'Copiado!',
+      docs_toast: `
+
+O componente \`ToastContainer\` é utilizado para exibir notificações de toast na sua aplicação. 
+
+## Configuração
+
+Adicione o \`ToastContainer\` no seu componente:
+
+\`\`\`jsx
+import React from 'react';
+import ToastContainer, { toast } from 'shiba-ui';
+
+function App() {
+  return (
+    <div>
+      {/* Outros componentes */}
+      <ToastContainer />
+    </div>
+  );
+}
+  
+export default App;
+\`\`\`
+
+## Utilização
+
+Utilize as funções de toast para exibir mensagens:
+
+\`\`\`jsx
+import { toast } from 'shiba-ui';
+
+const toastSuccess = toast.success('Mensagem de exemplo');
+const toastError = toast.error('Mensagem de exemplo');
+const toastNeutral = toast.neutral('Mensagem de exemplo');
+const toastWarning = toast.warning('Mensagem de exemplo');
+\`\`\`
+
+## Propriedades Aceitas (\`IToast\`)
+
+As propriedades que podem ser passadas para as funções de toast são:
+  
+- **message**:  Mensagem a ser exibida.
+- **timeout**: Tempo de exibição do toast (em milissegundos).
+- **$background**: Cor de fundo do toast.
+- **$messageColor**: Cor da mensagem do toast.
+- **$borderColor**: Cor da borda do toast.
+- **$width:**: Largura do toast.
+- **$height**: Altura do toast.
+- **$borderRadius**: Borda arredondada do toast.
+
+\`\`\`jsx
+const customToast = toast.neutral('Mensagem de exemplo', {
+  timeout: 5000,
+  $background: 'charcoal',
+  $messageColor: 'secondary',
+  $borderColor: 'secondary',
+  $borderRadius: 'sm',
+  $height: 50,
+  $width: 500,
+})
+\`\`\`
+`,
     },
   },
 };
