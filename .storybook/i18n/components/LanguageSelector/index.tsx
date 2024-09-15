@@ -6,8 +6,8 @@ import { DocsContainer, DocsContainerProps } from '@storybook/addon-docs';
 interface LanguageSelectorProps extends DocsContainerProps {}
 
 const languages = [
-  { code: 'pt', label: 'PT' },
-  { code: 'en', label: 'EN' },
+  { code: 'pt', label: 'PT', selected: 'Português' },
+  { code: 'en', label: 'EN', selected: 'English' },
 ];
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
@@ -22,13 +22,13 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = (props) => {
   return (
     <Fragment>
       <S.LanguageSelectorWrapper>
-        {languages.map(({ code, label }) => (
+        {languages.map(({ code, label, selected }) => (
           <S.LanguageButton
             key={code}
             $isActive={selectedLanguage === code}
             onClick={() => handleLanguageChange(code)}
           >
-            {label}
+            {selectedLanguage == code ? selected : label}
           </S.LanguageButton>
         ))}
       </S.LanguageSelectorWrapper>

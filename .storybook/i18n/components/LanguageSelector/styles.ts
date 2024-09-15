@@ -8,15 +8,16 @@ export const LanguageSelectorWrapper = styled.div`
 `;
 
 export const LanguageButton = styled.div<{ $isActive?: boolean }>`
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   padding: 4px 16px;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   color: ${({ $isActive }) => ($isActive ? '#FFFFFF' : '#121212')};
   background: ${({ $isActive }) => ($isActive ? '#121212' : '#FFFFFF')};
 
   &:hover {
     cursor: pointer;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    transition: transform 0.1s ease-out;
   }
 `;
