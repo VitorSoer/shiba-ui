@@ -114,8 +114,12 @@ const customToast = toast.neutral('Mensagem de exemplo', {
 })
 \`\`\`
 `,
+      docs_on_change:
+        'Accepts a function to be called when the component is changed.',
+      docs_value: 'Accepts a `number` to set the value.',
     },
   },
+
   pt: {
     translation: {
       colors_title: 'Cores',
@@ -233,6 +237,10 @@ const customToast = toast.neutral('Mensagem de exemplo', {
 })
 \`\`\`
 `,
+
+      docs_on_change:
+        'Aceita uma função para ser chamada ao alterar o componente.',
+      docs_value: 'Aceita um `number` para definir o valor.',
     },
   },
 };
