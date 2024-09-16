@@ -148,14 +148,13 @@ const meta: Meta<IButton> = {
         category: 'Component',
       },
     },
-
     $boxShadow: {
       control: 'select',
       options: getEntryOptionsForSummary(boxShadow),
       description: t('docs_shadow'),
       table: {
         type: { summary: formatKeyNamesForSummary(boxShadow) },
-        defaultValue: { summary: 'undefined' },
+        defaultValue: { summary: 'rm' },
         category: 'Component',
       },
     },
@@ -165,7 +164,7 @@ const meta: Meta<IButton> = {
       description: t('docs_elevation'),
       table: {
         type: { summary: formatKeyNamesForSummary(elevation) },
-        defaultValue: { summary: 'undefined' },
+        defaultValue: { summary: 'rm' },
         category: 'Component',
       },
     },

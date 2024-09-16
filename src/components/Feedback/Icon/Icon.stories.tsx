@@ -4,12 +4,14 @@ import { color } from '../../../theme/constants/color';
 import * as iconList from '../../../assets/icons';
 import { IIconProps } from './types';
 import { Meta, StoryObj } from '@storybook/react';
-
+import { boxShadow } from '../../../theme/constants/boxShadow';
+import { elevation } from '../../../theme/constants/elevation';
 import {
   formatEntryNamesForSummary,
   formatKeyNamesForSummary,
   getEntryOptionsForSummary,
 } from '../../../functions/storybook';
+
 
 const meta: Meta<IIconProps> = {
   title: 'Components/Feedback/Icon',
@@ -21,7 +23,17 @@ const meta: Meta<IIconProps> = {
       description: t('docs_icon_selection'),
       table: {
         type: { summary: formatEntryNamesForSummary(iconList) },
-        defaultValue: { summary: 'ErrorIcon' },
+        defaultValue: { summary: 'ForwardIcon' },
+        category: 'Component',
+      },
+    },
+    $variant: {
+      control: 'select',
+      options: ['icon, circle', 'square', 'circleOutlined', 'squareOutlined'],
+      description: t('docs_variant'),
+      table: {
+        type: { summary: formatEntryNamesForSummary(iconList) },
+        defaultValue: { summary: 'icon' },
         category: 'Component',
       },
     },
@@ -43,6 +55,53 @@ const meta: Meta<IIconProps> = {
         category: 'Component',
       },
     },
+    $background: {
+      control: 'color',
+      description: t('docs_color'),
+      table: {
+        type: { summary: formatKeyNamesForSummary(color) },
+        defaultValue: { summary: 'primary' },
+        category: 'Component',
+      },
+    },
+    $borderColor: {
+      control: 'color',
+      description: t('docs_color'),
+      table: {
+        type: { summary: formatKeyNamesForSummary(color) },
+        defaultValue: { summary: 'primary' },
+        category: 'Component',
+      },
+    },
+    $boxSize: {
+      control: { type: 'number' },
+      description: t('docs_size'),
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: 'fit-content' },
+        category: 'Component',
+      },
+    },
+    $boxShadow: {
+      control: 'select',
+      options: getEntryOptionsForSummary(boxShadow),
+      description: t('docs_shadow'),
+      table: {
+        type: { summary: formatKeyNamesForSummary(boxShadow) },
+        defaultValue: { summary: 'rm' },
+        category: 'Component',
+      },
+    },
+    $elevation: {
+      control: 'select',
+      options: getEntryOptionsForSummary(elevation),
+      description: t('docs_elevation'),
+      table: {
+        type: { summary: formatKeyNamesForSummary(elevation) },
+        defaultValue: { summary: 'rm' },
+        category: 'Component',
+      },
+    },
   },
 };
 
@@ -50,6 +109,38 @@ export default meta;
 
 type Story = StoryObj<IIconProps>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    icon: 'ForwardIcon',
+  },
+};
+
+export const Circle: Story = {
+  args: {
+    icon: 'BugIcon',
+    $variant: 'circle',
+  },
+};
+
+export const Square: Story = {
+  args: {
+    icon: 'BellIcon',
+    $variant: 'square',
+  },
+};
+
+export const CircleOutlined: Story = {
+  args: {
+    icon: 'CameraIcon',
+    $variant: 'circleOutlined',
+  },
+};
+
+export const SquareOutlined: Story = {
+  args: {
+    icon: 'TrophyIcon',
+    $variant: 'squareOutlined',
+  },
+};
 
 (Icon as React.FC).displayName = 'Icon';
