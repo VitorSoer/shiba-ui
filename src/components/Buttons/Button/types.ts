@@ -3,11 +3,11 @@ import { BorderWidthType } from '../../../theme/constants/borderWidth';
 import { BoxShadowType } from '../../../theme/constants/boxShadow';
 import { ColorType } from '../../../theme/constants/color';
 import { ElevationType } from '../../../theme/constants/elevation';
-import { IconKeys, IIconProps } from '../../Feedback/Icon/types';
+import { IconKeys, PartialIconProps } from '../../Feedback/Icon/types';
 import { ISpinner } from '../../Feedback/Spinner/types';
 import { ITextDisplay } from '../../TextElements/TextDisplay/types';
 
-export interface IButton extends ITextDisplay, ISpinner, IIconProps {
+export interface IButton extends ITextDisplay, ISpinner, PartialIconProps {
   onClick?: () => void;
   rightIcon?: IconKeys;
   isLoading?: boolean;

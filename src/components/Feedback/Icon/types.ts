@@ -30,3 +30,4 @@ export interface IIconList {
 }
 
 export type IconKeys = keyof typeof iconList;
+export type PartialIconProps = Pick<IIconProps, 'icon' | '$iconSize' | '$iconColor'>
