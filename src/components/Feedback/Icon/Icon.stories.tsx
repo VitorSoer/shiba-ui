@@ -12,7 +12,6 @@ import {
   getEntryOptionsForSummary,
 } from '../../../functions/storybook';
 
-
 const meta: Meta<IIconProps> = {
   title: 'Components/Feedback/Icon',
   component: Icon,
@@ -29,10 +28,13 @@ const meta: Meta<IIconProps> = {
     },
     $variant: {
       control: 'select',
-      options: ['icon, circle', 'square', 'circleOutlined', 'squareOutlined'],
+      options: ['icon', 'circle', 'square', 'circleOutlined', 'squareOutlined'],
       description: t('docs_variant'),
       table: {
-        type: { summary: formatEntryNamesForSummary(iconList) },
+        type: {
+          summary:
+            "'icon' | 'circle' | 'square' | 'circleOutlined' | 'squareOutlined'",
+        },
         defaultValue: { summary: 'icon' },
         category: 'Component',
       },
