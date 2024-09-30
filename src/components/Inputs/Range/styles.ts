@@ -17,7 +17,7 @@ export const InputRange = styled.input<IRange & { $percentage: number }>`
     $thumbSize = 18,
     $height = 8,
   }) => {
-    const background = getColorValue(theme, $background || 'quartz');
+    const background = getColorValue(theme, $background || 'highlight');
     const trackColor = getColorValue(theme, $trackColor || 'primary');
 
     const getThumbStyle = () => css`

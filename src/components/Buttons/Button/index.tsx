@@ -30,9 +30,9 @@ const Button: React.FC<IButton> = ({
 
   const getComponentColor = (color?: ColorType): ColorType => {
     if (color) return color;
-    if ($isDisabled) return $variant === 'solid' ? 'cotton' : 'steel';
+    if ($isDisabled) return $variant === 'solid' ? 'background' : 'highlight';
 
-    return $variant !== 'solid' ? 'primary' : 'cotton';
+    return $variant !== 'solid' ? 'primary' : 'background';
   };
 
   const renderIcon = (icon: IconKeys) => (

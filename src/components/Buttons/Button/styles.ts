@@ -29,14 +29,14 @@ export const ButtonWrapper = styled.button<IButton>`
   }) => {
     const determineButtonColor = () => {
       if ($buttonColor) return $buttonColor;
-      if ($isDisabled) return $variant !== 'solid' ? 'transparent' : 'steel';
+      if ($isDisabled) return $variant !== 'solid' ? 'transparent' : 'highlight';
 
       return $variant !== 'solid' ? 'transparent' : 'primary';
     };
 
     const determineBorderColor = () => {
       if ($borderColor) return $borderColor;
-      if ($isDisabled) return 'steel';
+      if ($isDisabled) return 'highlight';
 
       return $variant === 'outlined' ? 'primary' : 'transparent';
     };

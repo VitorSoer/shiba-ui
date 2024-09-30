@@ -1,40 +1,41 @@
 export interface IColor {
-  obsidian: string;
-  charcoal: string;
-  graphite: string;
-  steel: string;
-  silver: string;
-  quartz: string;
-  porcelain: string;
-  cotton: string;
+  background: string;
+  section: string;
+  highlight: string;
+  accent: string;
+  content: string;
   primary: string;
   secondary: string;
   alternative: string;
-  highlight: string;
-  neutral: string;
   success: string;
   warning: string;
   error: string;
 }
 
 export const color: IColor = {
-  obsidian: '#121212',
-  charcoal: '#181818',
-  graphite: '#404040',
-  steel: '#9C9C9C',
-  silver: '#C5C5C5',
-  quartz: '#E4E4E4',
-  porcelain: '#F5F5F5',
-  cotton: '#FFFFFF',
-  primary: '#9149F9',
-  secondary: '#00BEE0',
+  background: '#F5F5F5',
+  section: '#FFFFFF',
+  highlight: '#C5C5C5',
+  accent: '#A8A8A8',
+  content: '#121212',
+  primary: '#7F2BFF',
+  secondary: '#486DF7',
   alternative: '#EF5975',
-  highlight: '#F88400',
-  neutral: '#3676AA',
-  success: '#00C948',
-  warning: '#F2C703',
-  error: '#D02329',
+  success: '#0EB75A',
+  warning: '#E0B02C',
+  error: '#C33336',
 };
+
+
+export const darkThemeColors: Partial<IColor> = {
+  background: '#121212',
+  section: '#181818',
+  highlight: '#505050',
+  accent: '#808080',
+  content: '#FFFFFF',
+};
+
 
 export type ColorKeys = keyof typeof color;
 export type ColorType = ColorKeys | string;
+

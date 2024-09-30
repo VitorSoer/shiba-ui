@@ -21,7 +21,7 @@ const Icon: React.FC<IIconProps> = ({
   const getComponentColor = (): ColorType => {
     return (
       $iconColor ||
-      ($variant === 'circle' || $variant === 'square' ? 'cotton' : 'primary')
+      ($variant === 'circle' || $variant === 'square' ? 'background' : 'primary')
     );
   };
 

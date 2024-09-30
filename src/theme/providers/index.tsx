@@ -1,17 +1,25 @@
 import '../../assets/fonts/fonts.css';
 
 import React from 'react';
-import { DefaultTheme } from 'styled-components/dist/types';
 import theme from '../../theme';
+import { IStyledProvider } from './types';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../../theme/config/globalStyles';
+import { color, darkThemeColors } from '../constants/color';
 
-export const StyledThemeProvider: React.FC<{
-  children: React.ReactNode;
-  customTheme?: Partial<DefaultTheme>;
-  customFonts?: string;
-}> = ({ children, customTheme = {}, customFonts = '' }) => {
-  const mergedTheme = { ...theme, ...customTheme };
+const getThemeColors = (themeVariant: string) => {
+  if (themeVariant == 'light') return { ...color };
+  if (themeVariant === 'dark') return { ...color, ...darkThemeColors };
+};
+
+export const StyledThemeProvider: React.FC<IStyledProvider> = ({
+  children,
+  customTheme = {},
+  customFonts = '',
+  themeVariant = 'light',
+}) => {
+  const baseColors = getThemeColors(themeVariant);
+  const mergedTheme = { ...theme, color: baseColors, ...customTheme };
 
   return (
     <ThemeProvider theme={mergedTheme}>

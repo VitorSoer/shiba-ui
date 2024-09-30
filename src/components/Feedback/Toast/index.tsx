@@ -38,9 +38,6 @@ export const toast = {
   error: (message: string, options?: Partial<IToast>) =>
     toastManager.addToast({ message, $variant: 'error', ...options }),
 
-  neutral: (message: string, options?: Partial<IToast>) =>
-    toastManager.addToast({ message, $variant: 'neutral', ...options }),
-
   warning: (message: string, options?: Partial<IToast>) =>
     toastManager.addToast({ message, $variant: 'warning', ...options }),
 };

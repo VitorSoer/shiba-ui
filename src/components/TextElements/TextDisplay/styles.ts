@@ -23,7 +23,7 @@ export const TextWrapper = styled.p<ITextDisplay>`
     text-align: ${$textAlign || 'left'};
     text-decoration: ${$textDecoration || 'none'};
     font-size: ${getFontSize(theme, $fontSize || 'md')};
-    color: ${getColorValue(theme, $textColor || 'obsidian')};
+    color: ${getColorValue(theme, $textColor || 'content')};
     font-weight: ${getFontWeight(theme, $fontWeight || 'regular')};
     font-family: ${theme.fontFamily[$fontFamily || 'default'] || 'Times New Roman'};
 

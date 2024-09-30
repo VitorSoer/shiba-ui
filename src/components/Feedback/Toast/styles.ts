@@ -39,7 +39,7 @@ export const ToastItem = styled.div<IToast & { $isExiting: boolean }>`
     $borderColor,
     $isExiting,
     $borderRadius = 'xs',
-    $background = 'porcelain',
+    $background = 'section',
   }) => css`
     display: flex;
     align-items: center;

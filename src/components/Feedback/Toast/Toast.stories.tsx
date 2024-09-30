@@ -24,7 +24,7 @@ type Story = StoryObj<typeof ToastContainer>;
 export const DefaultOptions: Story = {
   render: () => {
     const showToast = (message: string, type: ToastType) => {
-      return toast[type](message, {$width: 280});
+      return toast[type](message, { $width: 280 });
     };
 
     return (
@@ -48,22 +48,16 @@ export const DefaultOptions: Story = {
           $width={100}
         />
         <Button
-          text="Neutral"
-          onClick={() => showToast('Shiba UI - Toast Neutral', 'neutral')}
-          $buttonColor="neutral"
-          $width={100}
-        />
-        <Button
           text="Custom"
           onClick={() =>
             toast.neutral('Shiba UI - Toast Custom', {
-              $background: 'charcoal',
+              $background: 'highlight',
               $borderColor: 'secondary',
               $messageColor: 'secondary',
               timeout: 5000,
             })
           }
-          $buttonColor="obsidian"
+          $buttonColor="content"
           $width={100}
         />
         <ToastContainer />
