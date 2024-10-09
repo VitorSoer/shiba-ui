@@ -1,26 +1,18 @@
-import '../i18n/index';
-import type { Preview } from '@storybook/react';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { i18nDecorator } from '../decorators/i18nDecorator';
-import LanguageSelector from '../i18n/components/LanguageSelector';
-import { CenterDecorator } from '../decorators/centerDecorator';
+import '../src/i18n/index';
 
-export const decorators = [i18nDecorator, CenterDecorator];
+import type { Preview } from '@storybook/react';
+import { i18nDecorator } from '../src/decorators/i18nDecorator';
+import { themeDecorator } from '../src/decorators/themeDecorator';
+import { SettingsSelector } from '../src/components/SettingsSelector';
+
+export const decorators = [themeDecorator, i18nDecorator];
 
 const preview: Preview = {
   tags: ['autodocs'],
+
   parameters: {
-    layout: 'fullscreen', // Mantém o layout fullscreen
-    viewport: { ...INITIAL_VIEWPORTS },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-    docs: {
-      container: LanguageSelector,
-    },
+    layout: 'fullscreen',
+    docs: { container: SettingsSelector },
   },
 };
 

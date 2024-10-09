@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { IRange } from './types';
 import React, { useState, ChangeEvent } from 'react';
-import { withThemeProvider } from '../../../theme/providers';
+import { withTheme } from 'styled-components';
 
 const Range: React.FC<IRange> = ({
   value = 0,
@@ -34,4 +34,4 @@ const Range: React.FC<IRange> = ({
   );
 };
 
-export default withThemeProvider(Range);
+export default withTheme(Range);

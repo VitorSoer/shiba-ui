@@ -3,7 +3,7 @@ import * as S from './styles';
 import { nanoid } from 'nanoid';
 import { IToast } from './types';
 import React, { useState, useEffect } from 'react';
-import { withThemeProvider } from '../../../theme/providers';
+import { withTheme } from 'styled-components';
 import TextDisplay from '../../TextElements/TextDisplay';
 
 const toastManager = {
@@ -100,4 +100,4 @@ const ToastContainer: React.FC = () => {
   );
 };
 
-export default withThemeProvider(ToastContainer);
+export default withTheme(ToastContainer);

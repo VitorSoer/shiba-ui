@@ -20,7 +20,6 @@ export const StyledThemeProvider: React.FC<IStyledProvider> = ({
   themeVariant,
 }) => {
   const finalThemeVariant = themeVariant || 'light';
-
   const baseColors = getThemeColors(finalThemeVariant);
   const mergedTheme = { ...theme, color: baseColors, ...customTheme };
 
@@ -30,15 +29,5 @@ export const StyledThemeProvider: React.FC<IStyledProvider> = ({
       {customFonts && <style>{customFonts}</style>}
       {children}
     </ThemeProvider>
-  );
-};
-
-export const withThemeProvider = <T extends object>(
-  Component: React.ComponentType<T>
-) => {
-  return (props: T) => (
-    <StyledThemeProvider>
-      <Component {...props} />
-    </StyledThemeProvider>
   );
 };

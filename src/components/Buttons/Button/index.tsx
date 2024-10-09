@@ -4,7 +4,7 @@ import { IButton } from './types';
 import Icon from '../../Feedback/Icon';
 import Spinner from '../../Feedback/Spinner';
 import TextDisplay from '../../TextElements/TextDisplay';
-import { withThemeProvider } from '../../../theme/providers';
+import { withTheme } from 'styled-components';
 import { ColorType } from '../../../theme/constants/color';
 import { IconKeys } from '../../Feedback/Icon/types';
 
@@ -80,4 +80,4 @@ const Button: React.FC<IButton> = ({
   );
 };
 
-export default withThemeProvider(Button);
+export default withTheme(Button);

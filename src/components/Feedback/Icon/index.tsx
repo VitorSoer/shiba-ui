@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components';
 import * as iconList from '../../../assets/icons/index';
 import { getColorValue } from '../../../functions/theme';
 import { DefaultIconValues, IIconProps } from './types';
-import { withThemeProvider } from '../../../theme/providers';
+import { withTheme } from 'styled-components';
 import { ColorType } from '../../../theme/constants/color';
 
 const Icon: React.FC<IIconProps> = ({
@@ -42,4 +42,4 @@ const Icon: React.FC<IIconProps> = ({
   );
 };
 
-export default withThemeProvider(Icon);
+export default withTheme(Icon);
