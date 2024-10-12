@@ -122,5 +122,8 @@ const customToast = toast.neutral('Mensagem de exemplo', {
     spacing_title: 'Espaçamento',
     spacing_description:
       'Esta seção apresenta os espaçamentos disponíveis no design system. Os espaçamentos desempenham um papel essencial no layout, garantindo um alinhamento consistente e uma hierarquia visual clara entre os elementos.',
+    settings_language: 'Idioma',
+    settings_confirm: 'Confirmar',
+    settings_theme: 'Tema',
   },
 };

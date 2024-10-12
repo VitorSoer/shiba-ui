@@ -119,5 +119,8 @@ const customToast = toast.neutral('Mensagem de exemplo', {
     spacing_title: 'Spacing',
     spacing_description:
       'This section presents the spacings available in the design system. Spacings play a crucial role in the layout, ensuring consistent alignment and a clear visual hierarchy between elements.',
+    settings_language: 'Language',
+    settings_confirm: 'Confirm',
+    settings_theme: 'Theme',
   },
 };

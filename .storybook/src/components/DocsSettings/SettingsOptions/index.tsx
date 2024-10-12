@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import i18n from 'i18next';
+import i18n, { t } from 'i18next';
 import * as S from './styles';
 
 const LANGUAGES = ['pt', 'en'];
@@ -23,7 +23,7 @@ export const SettingsOptions: React.FC = () => {
 
   return (
     <S.ColumnWrapper>
-      <S.Label>Language</S.Label>
+      <S.Label>{t('settings_language')}</S.Label>
 
       <S.OptionsLine>
         {LANGUAGES.map((language) => (
@@ -37,7 +37,7 @@ export const SettingsOptions: React.FC = () => {
         ))}
       </S.OptionsLine>
 
-      <S.Label>Theme</S.Label>
+      <S.Label>{t('settings_theme')}</S.Label>
 
       <S.OptionsLine>
         {THEMES.map((theme) => (
@@ -52,7 +52,7 @@ export const SettingsOptions: React.FC = () => {
       </S.OptionsLine>
 
       <S.SettingsButton onClick={handleSettingsChanges}>
-        Confirmar
+        {t('settings_confirm')}
       </S.SettingsButton>
     </S.ColumnWrapper>
   );
