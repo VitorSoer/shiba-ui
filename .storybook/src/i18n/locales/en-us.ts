@@ -116,5 +116,8 @@ const customToast = toast.neutral('Mensagem de exemplo', {
     docs_on_change:
       'Accepts a function to be called when the component is changed.',
     docs_value: 'Accepts a `number` to set the value.',
+    spacing_title: 'Spacing',
+    spacing_description:
+      'This section presents the spacings available in the design system. Spacings play a crucial role in the layout, ensuring consistent alignment and a clear visual hierarchy between elements.',
   },
 };

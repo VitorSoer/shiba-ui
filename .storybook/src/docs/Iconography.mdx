@@ -1,8 +1,8 @@
 import { t } from 'i18next';
-import * as Icon from '../../../src/assets/icons';
-import {DocIconWrapper} from '../../../src/components/Feedback/Icon/styles';
+import * as iconList from '../../../src/assets/icons';
 import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
 import { DocsTitle, DocsDescription } from '../components/TextElements';
+import { DocsIcon } from '../components/DocsIcon';
 
 <Meta title="Design System/Icons" />
 
@@ -12,19 +12,7 @@ import { DocsTitle, DocsDescription } from '../components/TextElements';
 <br />
 
 <IconGallery>
-  {Object.entries(Icon).map(([name, icon]) => {
-    const handleClick = () => {
-      alert(t('docs_copied'))
-      navigator.clipboard.writeText(name)
-    }
-
-    return (
-      <DocIconWrapper key={name} onClick={handleClick}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d={icon.path.join(' ')} fill="currentColor" />
-        </svg>
-
-        <p>{name}</p>
-      </DocIconWrapper>
-  )})}
+  {Object.entries(iconList).map(([name, icon]) => (
+    <DocsIcon key={name} name={name} icon={icon} />
+  ))}
 </IconGallery>

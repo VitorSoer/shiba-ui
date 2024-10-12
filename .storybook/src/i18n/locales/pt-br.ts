@@ -119,5 +119,8 @@ const customToast = toast.neutral('Mensagem de exemplo', {
     docs_on_change:
       'Aceita uma função para ser chamada ao alterar o componente.',
     docs_value: 'Aceita um `number` para definir o valor.',
+    spacing_title: 'Espaçamento',
+    spacing_description:
+      'Esta seção apresenta os espaçamentos disponíveis no design system. Os espaçamentos desempenham um papel essencial no layout, garantindo um alinhamento consistente e uma hierarquia visual clara entre os elementos.',
   },
 };

@@ -8,7 +8,7 @@ const THEMES = ['light', 'dark', 'ocean'];
 
 interface SettingsSelectorProps extends DocsContainerProps {}
 
-export const SettingsSelector: React.FC<SettingsSelectorProps> = (props) => {
+export const SettingsSelector: React.FC<SettingsSelectorProps> = (props, context) => {
   const initialLanguage = i18n.language;
   const initialTheme = localStorage.getItem('theme') || 'light';
 
@@ -29,6 +29,9 @@ export const SettingsSelector: React.FC<SettingsSelectorProps> = (props) => {
     setSelectedTheme(theme);
     window.location.reload();
   };
+
+  console.log('CONTEXT', context);
+  
 
   return (
     <Fragment>

@@ -14,7 +14,7 @@ addons.setConfig({
     brandUrl: 'https://github.com/VitorSoer/shiba_ui',
 
     base: 'dark',
-    appBg: color.content,
+    appBg: '#121212',
     textColor: color.background,
     appBorderColor: color.highlight,
     appBorderRadius: 4,
