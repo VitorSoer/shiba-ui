@@ -100,4 +100,4 @@ const ToastContainer: React.FC = () => {
   );
 };
 
-export default withTheme(ToastContainer);
+export default withTheme(ToastContainer) as React.FC<IToast>;

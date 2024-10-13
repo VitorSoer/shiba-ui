@@ -42,4 +42,4 @@ const Icon: React.FC<IIconProps> = ({
   );
 };
 
-export default withTheme(Icon);
+export default withTheme(Icon) as React.FC<IIconProps>;

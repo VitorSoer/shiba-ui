@@ -24,15 +24,17 @@ const Button: React.FC<IButton> = ({
   $iconSize = 16,
   $textColor,
   $textAlign = 'center',
+  $fontWeight = 'strong',
+  $fontSize = 'sm',
   ...rest
 }) => {
   if (isHidden) return null;
 
   const getComponentColor = (color?: ColorType): ColorType => {
     if (color) return color;
-    if ($isDisabled) return $variant === 'solid' ? 'background' : 'highlight';
+    if ($isDisabled) return $variant === 'solid' ? '#F5F5F5' : 'highlight';
 
-    return $variant !== 'solid' ? 'primary' : 'background';
+    return $variant !== 'solid' ? 'primary' : '#F5F5F5';
   };
 
   const renderIcon = (icon: IconKeys) => (
@@ -70,6 +72,8 @@ const Button: React.FC<IButton> = ({
             text={text}
             $textColor={getComponentColor($textColor)}
             $textAlign={$textAlign}
+            $fontWeight={$fontWeight}
+            $fontSize={$fontSize}
             {...rest}
           />
 
@@ -80,4 +84,4 @@ const Button: React.FC<IButton> = ({
   );
 };
 
-export default withTheme(Button);
+export default withTheme(Button) as React.FC<IButton>;

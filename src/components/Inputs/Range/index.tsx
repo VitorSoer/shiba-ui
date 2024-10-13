@@ -34,4 +34,4 @@ const Range: React.FC<IRange> = ({
   );
 };
 
-export default withTheme(Range);
+export default withTheme(Range) as React.FC<IRange>;

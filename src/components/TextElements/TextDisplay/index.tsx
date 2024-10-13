@@ -9,4 +9,4 @@ const TextDisplay: React.FC<ITextDisplay> = ({ text, isHidden, ...rest }) => {
   return <S.TextWrapper {...rest}>{text || ''}</S.TextWrapper>;
 };
 
-export default withTheme(TextDisplay);
+export default withTheme(TextDisplay) as React.FC<ITextDisplay>;
