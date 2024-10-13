@@ -5,7 +5,7 @@ import { generateHoverScaleEffect } from '../../../functions/hover';
 import {
   getBorderRadius,
   getBorderWidth,
-  getBoxShadowOrElevation,
+  getBoxShadow,
   getColorValue,
   getSpacing,
 } from '../../../functions/theme';
@@ -18,7 +18,6 @@ export const ButtonWrapper = styled.button<IButton>`
     $borderRadius = 'xs',
     $borderWidth,
     $boxShadow,
-    $elevation,
     $width,
     $height,
     $padding = 'xs sm',
@@ -29,7 +28,8 @@ export const ButtonWrapper = styled.button<IButton>`
   }) => {
     const determineButtonColor = () => {
       if ($buttonColor) return $buttonColor;
-      if ($isDisabled) return $variant !== 'solid' ? 'transparent' : 'highlight';
+      if ($isDisabled)
+        return $variant !== 'solid' ? 'transparent' : 'highlight';
 
       return $variant !== 'solid' ? 'transparent' : 'primary';
     };
@@ -65,7 +65,7 @@ export const ButtonWrapper = styled.button<IButton>`
       padding: ${getSpacing(theme, $padding)};
 
       background: ${getColorValue(theme, btnColor)};
-      box-shadow: ${getBoxShadowOrElevation(theme, $elevation, $boxShadow)};
+      box-shadow: ${getBoxShadow(theme, $boxShadow)};
 
       border-style: solid;
       border-width: ${getBorderWidth(theme, btnBorderWidth)};

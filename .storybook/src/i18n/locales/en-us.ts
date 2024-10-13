@@ -47,7 +47,6 @@ export const en = {
     docs_disabled: 'Accepts a `boolean` to set the component to disabled.',
     docs_variant: 'Accepts predefined options to set the variant.',
     docs_shadow: 'Accepts predefined options to set the box shadow.',
-    docs_elevation: 'Accepts predefined options to set the elevation.',
     docs_full_width:
       'Accepts a `boolean` to determine if the component should occupy the full available space.',
     docs_copied: 'Copied!',

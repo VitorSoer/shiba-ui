@@ -5,7 +5,6 @@ import * as iconList from '../../../assets/icons';
 import { IIconProps } from './types';
 import { Meta, StoryObj } from '@storybook/react';
 import { boxShadow } from '../../../theme/constants/boxShadow';
-import { elevation } from '../../../theme/constants/elevation';
 import {
   formatEntryNamesForSummary,
   formatKeyNamesForSummary,
@@ -90,16 +89,6 @@ const meta: Meta<IIconProps> = {
       description: t('docs_shadow'),
       table: {
         type: { summary: formatKeyNamesForSummary(boxShadow) },
-        defaultValue: { summary: 'rm' },
-        category: 'Component',
-      },
-    },
-    $elevation: {
-      control: 'select',
-      options: getEntryOptionsForSummary(elevation),
-      description: t('docs_elevation'),
-      table: {
-        type: { summary: formatKeyNamesForSummary(elevation) },
         defaultValue: { summary: 'rm' },
         category: 'Component',
       },

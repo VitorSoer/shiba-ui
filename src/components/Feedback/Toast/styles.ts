@@ -46,7 +46,7 @@ export const ToastItem = styled.div<IToast & { $isExiting: boolean }>`
     justify-content: space-between;
     column-gap: 12px;
 
-    box-shadow: ${theme.elevation.xs};
+    box-shadow: ${theme.boxShadow.xs};
     background: ${getColorValue(theme, $background)};
 
     padding: 12px;

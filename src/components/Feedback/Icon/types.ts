@@ -1,7 +1,6 @@
 import * as iconList from '../../../assets/icons';
 import { BoxShadowType } from '../../../theme/constants/boxShadow';
 import { ColorType } from '../../../theme/constants/color';
-import { ElevationType } from '../../../theme/constants/elevation';
 
 export enum DefaultIconValues {
   Size = '20',
@@ -21,7 +20,6 @@ export interface IIconProps {
   $background?: ColorType;
   $variant?: 'icon' | 'circle' | 'square' | 'circleOutlined' | 'squareOutlined';
   $boxShadow?: BoxShadowType;
-  $elevation?: ElevationType;
 }
 
 export interface IIconList {

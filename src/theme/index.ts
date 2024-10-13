@@ -2,7 +2,6 @@ import { IBorderRadius, borderRadius } from './constants/borderRadius';
 import { IBorderWidth, borderWidth } from './constants/borderWidth';
 import { IBoxShadow, boxShadow } from './constants/boxShadow';
 import { IColor, color } from './constants/color';
-import { IElevation, elevation } from './constants/elevation';
 import { fontFamily, IFontFamily } from './constants/fontFamily';
 import { IFontSize, fontSize } from './constants/fontSize';
 import { IFontWeight, fontWeight } from './constants/fontWeight';
@@ -13,7 +12,6 @@ export interface IThemeProps {
   spacing: ISpacing;
   fontSize: IFontSize;
   fontWeight: IFontWeight;
-  elevation: IElevation;
   boxShadow: IBoxShadow;
   borderRadius: IBorderRadius;
   borderWidth: IBorderWidth;
@@ -25,7 +23,6 @@ const theme: IThemeProps = {
   spacing: spacing,
   fontSize: fontSize,
   fontWeight: fontWeight,
-  elevation: elevation,
   boxShadow: boxShadow,
   borderRadius: borderRadius,
   borderWidth: borderWidth,

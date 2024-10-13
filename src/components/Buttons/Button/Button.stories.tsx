@@ -15,7 +15,6 @@ import {
 import * as iconList from '../../../assets/icons';
 import { spacing } from '../../../theme/constants/spacing';
 import { boxShadow } from '../../../theme/constants/boxShadow';
-import { elevation } from '../../../theme/constants/elevation';
 
 const meta: Meta<IButton> = {
   title: 'Components/Buttons/Button',
@@ -154,16 +153,6 @@ const meta: Meta<IButton> = {
       description: t('docs_shadow'),
       table: {
         type: { summary: formatKeyNamesForSummary(boxShadow) },
-        defaultValue: { summary: 'rm' },
-        category: 'Component',
-      },
-    },
-    $elevation: {
-      control: 'select',
-      options: getEntryOptionsForSummary(elevation),
-      description: t('docs_elevation'),
-      table: {
-        type: { summary: formatKeyNamesForSummary(elevation) },
         defaultValue: { summary: 'rm' },
         category: 'Component',
       },

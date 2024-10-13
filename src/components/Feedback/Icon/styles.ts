@@ -1,26 +1,13 @@
-import styled, { css } from 'styled-components';
 import { IIconProps } from './types';
-import {
-  getBoxShadowOrElevation,
-  getColorValue,
-} from '../../../functions/theme';
-
-
+import styled, { css } from 'styled-components';
+import { getBoxShadow, getColorValue } from '../../../functions/theme';
 
 export const IconWrapper = styled.div<IIconProps>`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  ${({
-    theme,
-    $variant,
-    $background,
-    $borderColor,
-    $boxSize,
-    $boxShadow,
-    $elevation,
-  }) => {
+  ${({ theme, $variant, $background, $borderColor, $boxSize, $boxShadow }) => {
     const size = $boxSize ? `${$boxSize}px` : 'fit-content';
     const padding = $variant === 'icon' ? 0 : '12px';
     const background = getColorValue(theme, $background || 'primary');
@@ -51,7 +38,7 @@ export const IconWrapper = styled.div<IIconProps>`
       width: ${size};
       height: ${size};
       padding: ${padding};
-      box-shadow: ${getBoxShadowOrElevation(theme, $elevation, $boxShadow)};
+      box-shadow: ${getBoxShadow(theme, $boxShadow)};
       ${variants[$variant]};
     `;
   }}

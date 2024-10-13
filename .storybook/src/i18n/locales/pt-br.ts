@@ -49,7 +49,6 @@ export const pt = {
       'Aceita um `boolean` para definir o componente como desativado.',
     docs_variant: 'Aceita opções predefinidas para definir a variante.',
     docs_shadow: 'Aceita opções predefinidas para definir a sombra.',
-    docs_elevation: 'Aceita opções predefinidas para definir a elevação.',
     docs_full_width:
       'Aceita um `boolean` para definir se o componente deve ocupar todo o espaço disponível.',
     docs_copied: 'Copiado!',

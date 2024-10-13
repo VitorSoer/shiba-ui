@@ -6,7 +6,6 @@ import { ColorType } from '../theme/constants/color';
 import { BorderWidthType } from '../theme/constants/borderWidth';
 import { BorderRadiusType } from '../theme/constants/borderRadius';
 import { BoxShadowType } from '../theme/constants/boxShadow';
-import { ElevationType } from '../theme/constants/elevation';
 
 export const getColorValue = (
   theme: DefaultTheme,
@@ -48,24 +47,6 @@ export const getBoxShadow = (
   value?: BoxShadowType
 ): string => {
   return isKeyOf(value, theme.boxShadow) ? theme.boxShadow[value] : value;
-};
-
-export const getElevation = (
-  theme: DefaultTheme,
-  value?: ElevationType
-): string => {
-  return isKeyOf(value, theme.elevation) ? theme.elevation[value] : value;
-};
-
-export const getBoxShadowOrElevation = (
-  theme: DefaultTheme,
-  elevation: ElevationType,
-  boxShadow: BoxShadowType
-) => {
-  if (boxShadow) return getBoxShadow(theme, boxShadow);
-  if (elevation) return getElevation(theme, elevation);
-
-  return 'none';
 };
 
 export const getSpacing = (theme: DefaultTheme, value?: string): string => {
