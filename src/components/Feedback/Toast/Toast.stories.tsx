@@ -50,14 +50,14 @@ export const DefaultOptions: Story = {
         <Button
           text="Custom"
           onClick={() =>
-            toast.neutral('Shiba UI - Toast Custom', {
-              $background: 'highlight',
-              $borderColor: 'secondary',
-              $messageColor: 'secondary',
+            toast.success('Shiba UI - Toast Custom', {
+              $background: 'content',
+              $borderColor: 'primary',
+              $messageColor: 'primary',
               timeout: 5000,
             })
           }
-          $buttonColor="content"
+          $buttonColor="primary"
           $width={100}
         />
         <ToastContainer />
