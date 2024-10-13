@@ -18,7 +18,7 @@ const Button: React.FC<IButton> = ({
   isHidden = false,
   isLoading = false,
   $isDisabled = false,
-  $spinnerSize = 10,
+  $spinnerSize = 14,
   $spinnerColor,
   $iconColor,
   $iconSize = 16,
