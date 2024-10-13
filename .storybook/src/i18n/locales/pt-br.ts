@@ -103,7 +103,7 @@ As propriedades que podem ser passadas para as funções de toast são:
 - **$borderRadius**: Borda arredondada do toast.
 
 \`\`\`jsx
-const customToast = toast.neutral('Mensagem de exemplo', {
+const customToast = toast.success('Mensagem de exemplo', {
   timeout: 5000,
   $background: 'charcoal',
   $messageColor: 'secondary',
