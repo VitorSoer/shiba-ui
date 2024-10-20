@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "checkJs": false,
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "target": "ES6",
+    "module": "commonjs",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["@types/jest", "jest", "@testing-library/jest-dom"]
+  },
+  "include": ["./src/**/*", "./src/theme/config/styled-components.d.ts"]
+}
