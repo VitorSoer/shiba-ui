@@ -1,0 +1,51 @@
+{
+  "name": "shiba-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nanoid": "^5.0.7",
+    "react": "^18.3.1",
+    "styled-components": "^6.1.13",
+    "vite": "^5.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@storybook/addon-a11y": "^8.2.9",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/manager-api": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "@storybook/theming": "^8.2.9",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "9.x",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0",
+    "i18next": "^23.13.0",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.3",
+    "react-i18next": "^15.0.1",
+    "storybook": "^8.2.8",
+    "ts-jest": "^29.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1"
+  },
+  "scripts": {
+    "start": "storybook dev -p 8008 -c ./.storybook/config",
+    "build": "storybook build -c ./.storybook/config",
+    "test": "jest --coverage"
+  }
+}
