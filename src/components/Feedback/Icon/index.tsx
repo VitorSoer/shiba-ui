@@ -21,7 +21,9 @@ const Icon: React.FC<IIconProps> = ({
   const getComponentColor = (): ColorType => {
     return (
       $iconColor ||
-      ($variant === 'circle' || $variant === 'square' ? 'background' : 'primary')
+      ($variant === 'circle' || $variant === 'square'
+        ? 'background'
+        : 'primary')
     );
   };
 
@@ -32,7 +34,12 @@ const Icon: React.FC<IIconProps> = ({
   };
 
   return (
-    <S.IconWrapper onClick={handleClick} $variant={$variant} {...rest}>
+    <S.IconWrapper
+      data-testid="icon"
+      onClick={handleClick}
+      $variant={$variant}
+      {...rest}
+    >
       <svg width={$iconSize} height={$iconSize} viewBox={view}>
         {path.map((data: string, index: number) => (
           <path key={index} d={data} fill={selectedColor} />
