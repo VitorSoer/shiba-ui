@@ -2,6 +2,7 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { StyledThemeProvider } from '../../theme/providers';
 import {
+  IAttributesTest,
   IInteractionTest,
   IPartialRenderingTest,
   IRenderingTest,
@@ -46,6 +47,25 @@ export const testComponentStyleByProperties = <T,>({
       expectedResultingStyles
     )) {
       expect(element).toHaveStyle(`${cssProperty}: ${expectedCssValue}`);
+    }
+  });
+};
+
+export const testComponentAttributes = <T,>({
+  testId,
+  component: Component,
+  componentProperties,
+  expectedAttributes,
+}: IAttributesTest<T>) => {
+  it(`should render the component ${testId} with correct attributes`, () => {
+    const { getByTestId } = renderWithTheme(
+      <Component {...componentProperties} />
+    );
+
+    const element = getByTestId(testId);
+
+    for (const [attr, expectedValue] of Object.entries(expectedAttributes)) {
+      expect(element).toHaveAttribute(attr, expectedValue.toString());
     }
   });
 };

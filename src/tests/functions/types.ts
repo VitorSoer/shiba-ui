@@ -13,6 +13,10 @@ export interface ITextContentTest<T> extends IRenderingTest<T> {
   expectedText: string;
 }
 
+export interface IAttributesTest<T> extends IRenderingTest<T> {
+  expectedAttributes: Record<string, string | number>;
+}
+
 export interface IInteractionTest<T> extends IRenderingTest<T> {
   handler: () => void;
 }
