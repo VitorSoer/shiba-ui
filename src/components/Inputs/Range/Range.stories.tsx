@@ -85,7 +85,7 @@ const meta: Meta<IRange> = {
       description: t('docs_color'),
       table: {
         type: { summary: formatKeyNamesForSummary(color) },
-        defaultValue: { summary: 'Quartz' },
+        defaultValue: { summary: 'highlight' },
         category: 'Component',
       },
     },

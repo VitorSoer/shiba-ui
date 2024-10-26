@@ -19,7 +19,7 @@ export const TextWrapper = styled.p<ITextDisplay>`
     $textDecoration,
   }) => css`
     line-height: ${$lineHeight ? `${$lineHeight}px` : 'normal'};
-    letter-spacing: ${$letterSpacing || 1}px;
+    letter-spacing: ${$letterSpacing + 'px' || 'normal'};
     text-align: ${$textAlign || 'left'};
     text-decoration: ${$textDecoration || 'none'};
     font-size: ${getFontSize(theme, $fontSize || 'md')};

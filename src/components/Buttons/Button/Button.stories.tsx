@@ -227,7 +227,7 @@ const meta: Meta<IButton> = {
       description: t('docs_color'),
       table: {
         type: { summary: formatKeyNamesForSummary(color) },
-        defaultValue: { summary: 'cotton' },
+        defaultValue: { summary: 'background' },
         category: 'Text Display',
       },
     },

@@ -26,7 +26,7 @@ const meta: Meta<ITextDisplay> = {
       description: t('docs_color'),
       table: {
         type: { summary: formatKeyNamesForSummary(color) },
-        defaultValue: { summary: 'obsidian' },
+        defaultValue: { summary: 'content' },
         category: 'Component',
       },
     },
@@ -82,7 +82,7 @@ const meta: Meta<ITextDisplay> = {
       description: t('docs_letter_spacing'),
       table: {
         type: { summary: 'number' },
-        defaultValue: { summary: '0' },
+        defaultValue: { summary: 'normal' },
         category: 'Component',
       },
     },
