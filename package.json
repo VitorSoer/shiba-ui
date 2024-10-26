@@ -46,6 +46,6 @@
   "scripts": {
     "start": "storybook dev -p 8008 -c ./.storybook/config",
     "build": "storybook build -c ./.storybook/config",
-    "test": "jest --watchAll --coverage"
+    "test": "jest --watchAll"
   }
 }
