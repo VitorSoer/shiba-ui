@@ -22,6 +22,7 @@ const Range: React.FC<IRange> = ({
   return (
     <>
       <S.InputRange
+        data-testid="range"
         type="range"
         min={min}
         max={max}
