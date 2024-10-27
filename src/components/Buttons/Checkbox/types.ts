@@ -6,6 +6,8 @@ export interface ICheckbox extends PartialIconProps {
   handleChange?: (isChecked?: boolean) => void;
   $checkboxSize?: number;
   $checkboxColor?: ColorType;
+  $isDisabled?: boolean;
+  isHidden?: boolean;
 }
 
 export interface ITick extends ICheckbox {

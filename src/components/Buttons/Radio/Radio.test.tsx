@@ -2,7 +2,10 @@ import Radio from '.';
 import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
+  testComponentVisibility,
+  testComponentDisabledBehavior,
 } from '../../../tests/functions';
+import { color } from '../../../theme/constants/color';
 
 describe('UI Component: Radio', () => {
   testRenderingOfComponent({
@@ -19,6 +22,20 @@ describe('UI Component: Radio', () => {
       width: '50px',
       height: '50px',
       'border-color': 'red',
+    },
+  });
+
+  testComponentVisibility({
+    testId: 'radio',
+    component: Radio,
+    componentProperties: {},
+  });
+
+  testComponentDisabledBehavior({
+    testId: 'radio',
+    component: Radio,
+    expectedResultingStyles: {
+      'border-color': color.highlight,
     },
   });
 });

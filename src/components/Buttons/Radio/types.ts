@@ -5,6 +5,8 @@ export interface IRadio {
   handleChange?: (isChecked?: boolean) => void;
   $radioSize?: number;
   $radioColor?: ColorType;
+  $isDisabled?: boolean;
+  isHidden?: boolean;
 }
 
 export interface ITick extends IRadio {

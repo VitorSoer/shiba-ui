@@ -49,6 +49,24 @@ const meta: Meta<ICheckbox> = {
         category: 'Component',
       },
     },
+    $isDisabled: {
+      control: 'boolean',
+      description: t('docs_disabled'),
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+        category: 'Component',
+      },
+    },
+    isHidden: {
+      control: 'boolean',
+      description: t('docs_hide'),
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+        category: 'Component',
+      },
+    },
     icon: {
       control: 'select',
       options: getEntryOptionsForSummary(iconList),
@@ -76,5 +94,7 @@ export default meta;
 type Story = StoryObj<ICheckbox>;
 
 export const Default: Story = {};
+
+export const Disabled: Story = { args: { $isDisabled: true, isChecked: true } };
 
 (Checkbox as React.FC).displayName = 'Checkbox';

@@ -6,11 +6,13 @@ import React, { useEffect, useState } from 'react';
 
 const Checkbox: React.FC<ICheckbox> = ({
   isChecked = false,
-  $checkboxColor,
-  $checkboxSize = 28,
   handleChange = () => {},
+  $checkboxSize = 28,
+  $checkboxColor = 'primary',
   icon = 'SuccessTwoIcon',
   $iconColor = '#F5F5FB',
+  $isDisabled = false,
+  isHidden = false,
 }) => {
   const [checkboxIsChecked, setCheckboxIsChecked] = useState(isChecked);
 
@@ -23,15 +25,22 @@ const Checkbox: React.FC<ICheckbox> = ({
 
   useEffect(() => setCheckboxIsChecked(isChecked), [isChecked]);
 
+  if (isHidden) return null;
+
   return (
     <S.Box
       data-testid="checkbox"
       onClick={onCheckboxChange}
       $checkboxColor={$checkboxColor}
       $checkboxSize={$checkboxSize}
+      $isDisabled={$isDisabled}
     >
       {checkboxIsChecked && (
-        <S.Tick $isChecked={checkboxIsChecked} $checkboxColor={$checkboxColor}>
+        <S.Tick
+          $isChecked={checkboxIsChecked}
+          $checkboxColor={$checkboxColor}
+          $isDisabled={$isDisabled}
+        >
           <Icon
             icon={icon}
             $iconColor={$iconColor}

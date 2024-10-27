@@ -2,7 +2,10 @@ import Checkbox from '.';
 import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
+  testComponentVisibility,
+  testComponentDisabledBehavior,
 } from '../../../tests/functions';
+import { color } from '../../../theme/constants/color';
 
 describe('UI Component: Checkbox', () => {
   testRenderingOfComponent({
@@ -19,6 +22,20 @@ describe('UI Component: Checkbox', () => {
       width: '50px',
       height: '50px',
       'border-color': 'red',
+    },
+  });
+
+  testComponentVisibility({
+    testId: 'checkbox',
+    component: Checkbox,
+    componentProperties: {},
+  });
+
+  testComponentDisabledBehavior({
+    testId: 'checkbox',
+    component: Checkbox,
+    expectedResultingStyles: {
+      'border-color': color.highlight,
     },
   });
 });
