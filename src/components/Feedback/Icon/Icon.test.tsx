@@ -5,7 +5,7 @@ import {
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
-describe('UI Component: Spinner', () => {
+describe('UI Component: Icon', () => {
   testRenderingOfComponent({
     testId: 'icon',
     component: Icon,

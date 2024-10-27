@@ -3,7 +3,7 @@ import ToastContainer, { toast } from '.';
 import { render, screen, act } from '@testing-library/react';
 import { StyledThemeProvider } from '../../../theme/providers';
 
-describe('ToastContainer', () => {
+describe('UI Component: Toast', () => {
   it('should render toasts added to the toastManager', async () => {
     render(
       <StyledThemeProvider>
