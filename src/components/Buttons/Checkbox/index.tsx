@@ -43,7 +43,7 @@ const Checkbox: React.FC<ICheckbox> = ({
         >
           <Icon
             icon={icon}
-            $iconColor={$iconColor}
+            $iconColor={$isDisabled ? 'accent' : $iconColor}
             $iconSize={$checkboxSize / 1.75}
           />
         </S.Tick>
