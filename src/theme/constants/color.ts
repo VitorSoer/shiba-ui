@@ -10,6 +10,7 @@ export interface IColor {
   success: string;
   warning: string;
   error: string;
+  textDefault: string;
 }
 
 export const color: IColor = {
@@ -24,6 +25,7 @@ export const color: IColor = {
   success: '#0EB75A',
   warning: '#E0B02C',
   error: '#C33336',
+  textDefault: '#FFFFFF',
 };
 
 export const darkThemeColors: Partial<IColor> = {

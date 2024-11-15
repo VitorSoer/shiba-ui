@@ -121,5 +121,6 @@ const customToast = toast.success('Mensagem de exemplo', {
     settings_language: 'Language',
     settings_confirm: 'Confirm',
     settings_theme: 'Theme',
+    docs_image: 'Accepts a `string` to set the image source, which can be either a URL or a relative path to a local image.'
   },
 };
