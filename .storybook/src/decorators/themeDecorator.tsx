@@ -10,9 +10,9 @@ const CenterContainer = styled.div`
   align-items: center;
   gap: 16px;
 
-  width: 100%;
-  height: 100%;
-  min-height: 500px;
+  width: 100vw;
+  height: 400px;
+
   background: ${({ theme }) => theme.color.background};
 `;
 
