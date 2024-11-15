@@ -1,16 +1,11 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { IToast } from './types';
 import { getBorderRadius, getColorValue } from '../../../utils/styles/theme';
-
-const slideIn = keyframes`
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-`;
-
-const slideOut = keyframes`
-  from { transform: translateX(0); }
-  to { transform: translateX(100%); }
-`;
+import {
+  generateSlideInAnimation,
+  generateSlideOutAnimation,
+} from '../../../utils/styles/animations';
+import { generateHoverBrightnessEffect } from '../../../utils/styles/effects';
 
 const getBorderColor = (theme, $variant, $lineColor) => {
   if ($lineColor) return getColorValue(theme, $lineColor);
@@ -62,15 +57,12 @@ export const ToastItem = styled.div<IToast & { $isExiting: boolean }>`
     border-left-color: ${getBorderColor(theme, $variant, $borderColor)};
     border-radius: ${getBorderRadius(theme, $borderRadius)};
 
-    animation: ${$isExiting ? slideOut : slideIn} 0.3s ease-in-out;
+    ${$isExiting ? generateSlideOutAnimation() : generateSlideInAnimation()};
   `}
 `;
 
 export const CloseIcon = styled.div`
   cursor: pointer;
 
-  &:hover {
-    filter: brightness(75%);
-    transition: filter 0.25s ease;
-  }
+  ${generateHoverBrightnessEffect()}
 `;

@@ -43,7 +43,7 @@ const meta: Meta<IButton> = {
       description: t('docs_variant'),
       table: {
         type: { summary: "'solid' | 'outlined' | 'text'" },
-        defaultValue: { summary: "solid" },
+        defaultValue: { summary: 'solid' },
         category: 'Component',
       },
     },
@@ -83,7 +83,7 @@ const meta: Meta<IButton> = {
         category: 'Component',
       },
     },
-    $width: {
+    $buttonWidth: {
       control: 'number',
       description: t('docs_size'),
       table: {
@@ -92,7 +92,7 @@ const meta: Meta<IButton> = {
         category: 'Component',
       },
     },
-    $height: {
+    $buttonHeight: {
       control: 'number',
       description: t('docs_size'),
       table: {
@@ -119,7 +119,6 @@ const meta: Meta<IButton> = {
         category: 'Component',
       },
     },
-
     $borderRadius: {
       control: 'text',
       description: t('docs_size_predefined'),
@@ -307,7 +306,7 @@ export const Default: Story = {
   args: {
     text: t('docs_sample_text'),
     onClick: () => alert('Clicked!'),
-    $width: 200,
+    $buttonWidth: 200,
   },
 };
 
@@ -315,7 +314,7 @@ export const Outlined: Story = {
   args: {
     text: 'Sample text',
     $variant: 'outlined',
-    $width: 200,
+    $buttonWidth: 200,
     onClick: () => alert('Clicked!'),
   },
 };
@@ -324,7 +323,7 @@ export const Text: Story = {
   args: {
     text: 'Sample text',
     $variant: 'text',
-    $width: 200,
+    $buttonWidth: 200,
     onClick: () => alert('Clicked!'),
   },
 };
@@ -333,7 +332,7 @@ export const Disabled: Story = {
   args: {
     text: 'Sample text',
     $isDisabled: true,
-    $width: 200,
+    $buttonWidth: 200,
     onClick: () => alert('Clicked!'),
   },
 };
@@ -342,7 +341,7 @@ export const Loading: Story = {
   args: {
     text: 'Sample text',
     isLoading: true,
-    $width: 200,
+    $buttonWidth: 200,
     onClick: () => alert('Clicked!'),
   },
 };

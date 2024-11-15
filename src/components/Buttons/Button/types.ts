@@ -14,8 +14,8 @@ export interface IButton extends ITextDisplay, ISpinner, PartialIconProps {
   leftIcon?: IconKeys;
 
   $variant?: 'solid' | 'outlined' | 'text';
-  $width?: number;
-  $height?: number;
+  $buttonWidth?: number;
+  $buttonHeight?: number;
   $buttonColor?: ColorType;
   $borderColor?: ColorType;
   $borderWidth?: BorderWidthType;

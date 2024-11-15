@@ -37,8 +37,8 @@ describe('UI Component: Button', () => {
     testId: 'button',
     component: Button,
     propertiesToTest: {
-      $width: 200,
-      $height: 50,
+      $buttonWidth: 200,
+      $buttonHeight: 50,
       $buttonColor: 'tangerine',
       $padding: 'xs lg',
       $gap: 'sm 2x',

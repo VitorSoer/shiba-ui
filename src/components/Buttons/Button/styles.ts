@@ -1,6 +1,6 @@
 import { IButton } from './types';
 import styled, { css } from 'styled-components';
-import { generateHoverScaleEffect } from '../../../utils/styles/hover';
+import { generateHoverScaleEffect } from '../../../utils/styles/effects';
 
 import {
   getBorderRadius,
@@ -18,8 +18,8 @@ export const ButtonWrapper = styled.button<IButton>`
     $borderRadius = 'xs',
     $borderWidth,
     $boxShadow,
-    $width,
-    $height,
+    $buttonWidth,
+    $buttonHeight,
     $padding = 'xs sm',
     $gap = 'sm',
     $isDisabled,
@@ -58,8 +58,8 @@ export const ButtonWrapper = styled.button<IButton>`
       align-items: center;
       justify-content: center;
 
-      height: ${$height || 40}px;
-      width: ${$fullWidth ? '100%' : $width ? `${$width}px` : 'auto'};
+      height: ${$buttonHeight || 40}px;
+      width: ${$fullWidth ? '100%' : ($buttonWidth ? `${$buttonWidth}px` : 'auto')};
 
       gap: ${getSpacing(theme, $gap)};
       padding: ${getSpacing(theme, $padding)};

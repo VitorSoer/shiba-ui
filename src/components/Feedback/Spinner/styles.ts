@@ -1,11 +1,7 @@
-import styled, { css, keyframes } from 'styled-components';
 import { ISpinner } from './types';
+import styled, { css } from 'styled-components';
 import { getColorValue } from '../../../utils/styles/theme';
-
-const spinAnimation = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`;
+import { generateSpinAnimation } from '../../../utils/styles/animations';
 
 export const SpinnerWrapper = styled.div<ISpinner>`
   ${({ theme, $spinnerColor, $spinnerSize = 20 }) => css`
@@ -19,6 +15,6 @@ export const SpinnerWrapper = styled.div<ISpinner>`
     border-top-color: ${getColorValue(theme, $spinnerColor || 'primary')};
     border-right-color: ${getColorValue(theme, $spinnerColor || 'primary')};
 
-    animation: ${spinAnimation} 1s linear infinite;
+    ${generateSpinAnimation()}
   `}
 `;
