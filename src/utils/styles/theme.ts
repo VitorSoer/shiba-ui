@@ -50,7 +50,7 @@ export const getBoxShadow = (
 };
 
 export const getSpacing = (theme: DefaultTheme, value?: string): string => {
-  const spacingArray = value.split(' ');
+  const spacingArray = value?.split(' ');
   const isKeyOfSpacing = (value: string) => isKeyOf(value, theme.spacing);
 
   if (spacingArray?.every(isKeyOfSpacing)) {

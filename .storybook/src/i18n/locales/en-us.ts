@@ -121,6 +121,13 @@ const customToast = toast.success('Mensagem de exemplo', {
     settings_language: 'Language',
     settings_confirm: 'Confirm',
     settings_theme: 'Theme',
-    docs_image: 'Accepts a `string` to set the image source, which can be either a URL or a relative path to a local image.'
+    docs_image:
+      'Accepts a `string` to set the image source, which can be either a URL or a relative path to a local image.',
+    docs_rating:
+      'Accepts a `number` to represent the current rating value, typically between 0 and `maxStars`.',
+    docs_maxStars:
+      'Accepts a `number` to set the maximum number of stars displayed for the rating.',
+    docs_readonly:
+      'Accepts a `boolean` to specify if the rating is read-only, preventing user interaction.',
   },
 };
