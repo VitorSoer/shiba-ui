@@ -7,8 +7,8 @@ export interface IRating {
   readonly?: boolean;
   handleChange?: (rating: number) => void;
 
-  $size?: number;
+  $ratingSize?: number;
   $gap?: SpacingType;
-  $baseColor?: ColorType;
-  $fillColor?: ColorType;
+  $ratingBaseColor?: ColorType;
+  $ratingFillColor?: ColorType;
 }

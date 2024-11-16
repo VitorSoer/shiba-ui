@@ -9,7 +9,7 @@ export const RatingContainer = styled.div<IRating>`
 `;
 
 export const StarContainer = styled.div<IRating & { $interactive?: boolean }>`
-  ${({ $size, $interactive }) => css`
+  ${({ $ratingSize: $size, $interactive }) => css`
     position: relative;
     display: inline-block;
 
@@ -32,22 +32,22 @@ export const baseStar = css<IRating>`
   top: 0;
   left: 0;
   line-height: 1;
-  font-size: ${({ $size }) => $size}px;
+  font-size: ${({ $ratingSize: $size }) => $size}px;
   transition: all 0.2s ease-in-out;
 `;
 
 export const StarBase = styled.div<IRating>`
   ${baseStar}
 
-  color: ${({ theme, $baseColor }) => getColorValue(theme, $baseColor)};
+  color: ${({ theme, $ratingBaseColor: $baseColor }) => getColorValue(theme, $baseColor)};
 `;
 
 export const StarFill = styled.div<IRating & { $fillPercentage: number }>`
   ${baseStar}
 
-  ${({ theme, $fillPercentage, $fillColor }) => css`
+  ${({ theme, $fillPercentage, $ratingFillColor}) => css`
     clip-path: ${`inset(0 ${100 - $fillPercentage}% 0 0)`};
-    color: ${getColorValue(theme, $fillColor)};
+    color: ${getColorValue(theme, $ratingFillColor)};
   `}
 `;
 

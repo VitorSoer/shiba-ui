@@ -37,7 +37,7 @@ const meta: Meta<IRating> = {
         category: 'Component',
       },
     },
-    $size: {
+    $ratingSize: {
       control: 'number',
       description: t('docs_size'),
       table: {
@@ -46,16 +46,16 @@ const meta: Meta<IRating> = {
         category: 'Component',
       },
     },
-    $baseColor: {
+    $ratingBaseColor: {
       control: 'color',
       description: t('docs_color'),
       table: {
         type: { summary: formatKeyNamesForSummary(color) },
-        defaultValue: { summary: 'primary' },
+        defaultValue: { summary: 'highlight' },
         category: 'Component',
       },
     },
-    $fillColor: {
+    $ratingFillColor: {
       control: 'color',
       description: t('docs_color'),
       table: {
@@ -69,7 +69,7 @@ const meta: Meta<IRating> = {
       description: t('docs_size_predefined'),
       table: {
         type: { summary: formatKeyNamesForSummary(spacing) },
-        defaultValue: { summary: 'sm' },
+        defaultValue: { summary: 'xs' },
         category: 'Component',
       },
     },

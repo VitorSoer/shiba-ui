@@ -8,10 +8,10 @@ const Rating: React.FC<IRating> = ({
   maxStars = 5,
   readonly = false,
   handleChange,
-  $size = 30,
+  $ratingSize: $size = 30,
   $gap = 'xs',
-  $baseColor = 'highlight',
-  $fillColor = 'primary',
+  $ratingBaseColor = 'highlight',
+  $ratingFillColor = 'primary',
 }) => {
   const [hoverValue, setHoverValue] = useState<number | null>(null);
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
@@ -52,7 +52,7 @@ const Rating: React.FC<IRating> = ({
         key={position}
         $interactive={!readonly}
         onMouseLeave={handleMouseLeave}
-        $size={$size}
+        $ratingSize={$size}
       >
         {!readonly && (
           <S.ClickArea
@@ -61,14 +61,18 @@ const Rating: React.FC<IRating> = ({
           />
         )}
 
-        <S.StarBase aria-hidden="true" $size={$size} $baseColor={$baseColor}>
+        <S.StarBase
+          aria-hidden="true"
+          $ratingSize={$size}
+          $ratingBaseColor={$ratingBaseColor}
+        >
           ★
         </S.StarBase>
 
         <S.StarFill
           aria-hidden="true"
-          $size={$size}
-          $fillColor={$fillColor}
+          $ratingSize={$size}
+          $ratingFillColor={$ratingFillColor}
           $fillPercentage={fillPercentage}
         >
           ★
