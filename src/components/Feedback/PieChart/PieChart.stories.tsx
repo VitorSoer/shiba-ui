@@ -4,7 +4,7 @@ import { IPieChart } from './types';
 import { t } from 'i18next';
 
 const meta: Meta<IPieChart> = {
-  title: 'Components/Inputs/PieChart',
+  title: 'Components/Feedback/PieChart',
   component: PieChart,
   argTypes: {
     data: {
