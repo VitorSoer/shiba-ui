@@ -133,5 +133,7 @@ const customToast = toast.success('Mensagem de exemplo', {
       'Accepts a `ReactNode` to define the children elements to be rendered.',
     docs_position:
       "Accepts a string to specify the position: 'top', 'bottom', 'left', or 'right'.",
+    docs_data:
+      "Accepts an array of objects, each containing 'percent', 'color', and 'label' to define pie chart segments.",
   },
 };

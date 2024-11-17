@@ -136,5 +136,7 @@ const customToast = toast.success('Mensagem de exemplo', {
       'Aceita um `ReactNode` para definir os elementos filhos a serem renderizados.',
     docs_position:
       "Aceita uma string para especificar a posição: 'top', 'bottom', 'left' ou 'right'.",
+    docs_data:
+      "Aceita um array de objetos, cada um contendo 'percent', 'color' e 'label' para definir os segmentos do gráfico de pizza.",
   },
 };
