@@ -132,5 +132,9 @@ const customToast = toast.success('Mensagem de exemplo', {
       'Aceita um `number` para definir o número máximo de estrelas exibidas na avaliação.',
     docs_readonly:
       'Aceita um `booleano` para especificar se a avaliação é apenas leitura, impedindo a interação do usuário.',
+    docs_children:
+      'Aceita um `ReactNode` para definir os elementos filhos a serem renderizados.',
+    docs_position:
+      "Aceita uma string para especificar a posição: 'top', 'bottom', 'left' ou 'right'.",
   },
 };

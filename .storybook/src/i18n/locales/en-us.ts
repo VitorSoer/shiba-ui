@@ -127,7 +127,9 @@ const customToast = toast.success('Mensagem de exemplo', {
       'Accepts a `number` to represent the current rating value, typically between 0 and `maxStars`.',
     docs_maxStars:
       'Accepts a `number` to set the maximum number of stars displayed for the rating.',
-    docs_readonly:
-      'Accepts a `boolean` to specify if the rating is read-only, preventing user interaction.',
+    docs_children:
+      'Accepts a `ReactNode` to define the children elements to be rendered.',
+    docs_position:
+      "Accepts a string to specify the position: 'top', 'bottom', 'left', or 'right'.",
   },
 };
