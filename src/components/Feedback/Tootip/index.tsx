@@ -16,6 +16,7 @@ const Tooltip: React.FC<ITooltip> = ({
   let timeoutId: NodeJS.Timeout;
 
   const showTooltip = () => {
+    if (isHidden) return;
     timeoutId = setTimeout(() => setIsVisible(true), 200);
   };
 
@@ -23,8 +24,6 @@ const Tooltip: React.FC<ITooltip> = ({
     clearTimeout(timeoutId);
     setIsVisible(false);
   };
-
-  if (isHidden) return null;
 
   return (
     <S.Wrapper

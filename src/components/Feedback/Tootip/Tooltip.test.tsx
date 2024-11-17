@@ -3,7 +3,6 @@ import React from 'react';
 import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
-  testComponentVisibility,
 } from '../../../tests/functions';
 
 describe('UI Component: Tooltip', () => {
@@ -24,11 +23,5 @@ describe('UI Component: Tooltip', () => {
     expectedResultingStyles: {
       background: 'orange',
     },
-  });
-
-  testComponentVisibility({
-    testId: 'tooltip',
-    component: Tooltip,
-    componentProperties: { children: <p>Hello</p>, content: 'Test Tooltip' },
   });
 });
